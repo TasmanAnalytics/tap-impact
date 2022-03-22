@@ -1,0 +1,244 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "brand_signatory": {
+        "type": ["null", "string"]
+      },
+      "brand_signatory_date": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "date_created": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "date_last_updated": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "end_date": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "id": {
+        "type": ["null", "string"]
+      },
+      "partner_id": {
+        "type": ["null", "integer"]
+      },
+      "partner_signatory": {
+        "type": ["null", "string"]
+      },
+      "partner_signatory_date": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "partner_value_1": {
+        "type": ["null", "string"]
+      },
+      "pdfuri": {
+        "type": ["null", "string"]
+      },
+      "start_date": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "status": {
+        "type": ["null", "string"]
+      },
+      "template_terms": {
+        "anyOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "change_notification_period": {
+                "type": ["null", "integer"]
+              },
+              "currency": {
+                "type": ["null", "string"]
+              },
+              "custom_creative_player": {
+                "type": ["null", "string"]
+              },
+              "event_payouts": { 
+                "anyOf": [
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "credit_policy": {
+                          "type": ["null", "string"]
+                        },
+                        "default_payout_rate": {
+                          "type": ["null", "number"]
+                        },
+                        "event_category": {
+                          "type": ["null", "string"]
+                        },
+                        "event_type_id": {
+                          "type": ["null", "integer"]
+                        },
+                        "event_type_name": {
+                          "type": ["null", "string"]
+                        },
+                        
+                        "payout_level": {
+                          "type": ["null", "string"]
+                        },
+                        "payout_groups": {
+                          "anyOf": [
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "id": {
+                                    "type": ["null", "string"]
+                                  },
+                                  "payout_rate": {
+                                    "type": ["null", "integer"]
+                                  },
+                                  "rank": {
+                                    "type": ["null", "integer"]
+                                  },
+                                  "rules": {
+                                    "anyOf": [
+                                      {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "additionalProperties":false,
+                                          "properties": {
+                                            "operator": {
+                                              "type": ["null", "string"]
+                                            },
+                                            "values": {
+                                              "anyOf":[
+                                                  {
+                                                    "type": "array",
+                                                    "items": {
+                                                      "type": ["null", "string"]
+                                                    }
+                                                  }
+                                                ]
+                                            },
+                                            "variables": {
+                                              "type": ["null", "string"]
+                                            }
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "payout_scheduling": {
+                          "anyOf": [
+                            {
+                              "type": "object",
+                              "additionProperties": false,
+                              "properties": {
+                                "basis": {
+                                  "type": ["null", "string"]
+                                },
+                                "day_offset": {
+                                  "type": ["null", "integer"]
+                                },
+                                "period": {
+                                  "type": ["null", "string"]
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "valid_referrals": {
+                          "anyOf": [
+                            {
+                              "type":"array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "_type": {
+                                    "type": ["null", "string"]
+                                  },
+                                  "window": {
+                                    "type": ["null", "integer"]
+                                  },
+                                  "window_unit": {
+                                    "type": ["null", "string"]
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "labels": { 
+                "anyOf":[
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": ["null", "string"]
+                    }
+                  }
+                ]
+              },
+              "max_return_percentage": {
+                "type": ["null", "integer"]
+              },
+              "name": {
+                "type": ["null", "string"]
+              },
+              "promotional_terms": {
+                "anyOf": [
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "terms_name": {
+                          "type": ["null", "string"]
+                        },
+                        "terms_type": {
+                          "type": ["null", "string"]
+                        },
+                        "terms_content": {
+                          "type": ["null", "string"]
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "return_policy": {
+                "type": ["null", "string"]
+              },
+              "template_id": {
+                "type": ["null", "integer"]
+              },
+              "version_id": {
+                "type": ["null", "integer"]
+              }
+            }
+          }
+        ]
+      },
+      "uri": {
+        "type": ["null", "string"]
+      }
+    }
+}
