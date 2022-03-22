@@ -89,8 +89,9 @@ STREAMS = {
                 'path': 'Campaigns/{}/Contracts',
                 'data_key': 'Contracts',
                 'key_properties': ['id'],
-                'replication_method': 'FULL_TABLE',
-                'parent': 'campaign'
+                'replication_method': 'INCREMENTAL',
+                'replication_keys': ['date_last_updated'],
+                'bookmark_type': 'datetime'
             },
             'conversion_paths': {
                 'path': 'Campaigns/{}/Models/<model_id>/ConversionPaths',
