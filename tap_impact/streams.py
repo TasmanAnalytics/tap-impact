@@ -178,7 +178,7 @@ STREAMS = {
     },
     'media_partners': {
         'path': 'MediaPartners',
-        'data_key': 'MediaPartners',
+        'data_key': 'Partners',
         'key_properties': ['id'],
         'replication_method': 'FULL_TABLE'
     },
