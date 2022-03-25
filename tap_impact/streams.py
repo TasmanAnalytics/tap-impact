@@ -70,7 +70,9 @@ STREAMS = {
                 'path': 'Campaigns/{}/Clicks',
                 'data_key': 'Clicks',
                 'key_properties': ['id'],
-                'replication_method': 'FULL_TABLE'
+                'replication_method': 'INCREMENTAL',
+                'bookmark_type': 'datetime',
+                'bookmark_query_field': 'Date'
             },
             'contacts': {
                 'path': 'Campaigns/{}/Contacts',
