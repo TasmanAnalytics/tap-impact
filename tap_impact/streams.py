@@ -37,10 +37,12 @@ STREAMS = {
                 'path': 'Actions',
                 'data_key': 'Actions',
                 'params': {
-                    'CampaignId': '<parent_id>'
+                    'CampaignId': '<parent_id>',
+                    'StartDate': '<last_datetime>'
                 },
                 'key_properties': ['id'],
-                'replication_method': 'FULL_TABLE'
+                'replication_method': 'FULL_TABLE', 
+                'bookmark_type': 'datetime'
             },
             'action_inquiries': {
                 'path': 'ActionInquiries',
@@ -71,6 +73,7 @@ STREAMS = {
                 'data_key': 'Clicks',
                 'key_properties': ['id'],
                 'replication_method': 'INCREMENTAL',
+                'replication_keys': ['event_date'],
                 'bookmark_type': 'datetime',
                 'bookmark_query_field': 'Date'
             },
