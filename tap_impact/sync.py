@@ -339,8 +339,8 @@ def sync_endpoint(client,
                                         .format(child_stream_name, parent_id, child_total_records))
 
             # Update the state with the max_bookmark_value for the stream
-            if bookmark_field:
-                write_bookmark(state, stream_name, max_bookmark_value)
+            # if bookmark_field:
+            #     write_bookmark(state, stream_name, max_bookmark_value)
 
             # Adjust total_records w/ record_count, if needed
             if record_count > total_records:
